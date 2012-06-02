@@ -3,7 +3,7 @@ module OmniAuth
     class SecondLife < OmniAuth::Strategies::OpenID
       #args :api_key
 
-      option :api_key, nil
+      #option :api_key, nil
       option :name, "secondlife"
       option :identifier, "https://id.secondlife.com/openid/openidserver"
 
@@ -37,10 +37,6 @@ module OmniAuth
 
       def steam_id
         openid_response.display_identifier.split("/").last
-      end
-
-      def player_profile_uri
-        URI.parse("http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0001/?key=#{options.api_key}&steamids=#{steam_id}")
       end
     end
   end
