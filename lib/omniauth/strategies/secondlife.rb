@@ -1,11 +1,11 @@
 module OmniAuth
   module Strategies
-    class Steam < OmniAuth::Strategies::OpenID
-      args :api_key
+    class SecondLife < OmniAuth::Strategies::OpenID
+      #args :api_key
 
       option :api_key, nil
-      option :name, "steam"
-      option :identifier, "http://steamcommunity.com/openid"
+      option :name, "secondlife"
+      option :identifier, "https://id.secondlife.com/openid/openidserver"
 
       uid { steam_id }
 
