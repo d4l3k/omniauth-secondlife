@@ -5,7 +5,7 @@ module OmniAuth
 
       #option :api_key, nil
       option :name, "secondlife"
-      option :identifier, "https://id.secondlife.com/openid/openidserver"
+      option :identifier, "https://id.secondlife.com/id/id"
 
       uid { steam_id }
 
